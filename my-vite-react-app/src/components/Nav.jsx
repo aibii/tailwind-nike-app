@@ -2,10 +2,10 @@ import { headerLogo } from '../assets/images';
 import { hamburger } from '../assets/icons';
 import { navLinks } from '../constants';
 
-const Nav = () => {
+const Nav = () => {   //functional React component
   return (
     <header className='padding-x py-8 absolute z-10 w-full'>
-      <nav className="flex justify-between items-center max-container">
+      <nav className="flex justify-between items-center max-container"> 
         <a href="/">
             <img src={headerLogo}
             alt="Logo"
@@ -13,7 +13,8 @@ const Nav = () => {
             height={29}
           />
         </a>
-        <ul className="flex-1 flex  justify-center items-center gap-16 max-lg:hidden">
+        <ul className="flex flex-1 justify-center items-center gap-16 max-lg:hidden">
+          {/*Hides the element on screens 1024px wide or smaller*/}
           {navLinks.map((item) => (
             <li key={item.label}>
               <a href={item.href}
